@@ -1,0 +1,7 @@
+.idea/
+cmake-build-debug/
+report/backup/
+bin/
+out/
+report/array.yaml
+scaling.py
