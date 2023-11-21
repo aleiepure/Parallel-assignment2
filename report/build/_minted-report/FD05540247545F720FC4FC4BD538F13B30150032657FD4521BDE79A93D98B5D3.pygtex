@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+gcc\PYG{+w}{ }\PYGZhy{}O2\PYG{+w}{ }\PYGZhy{}ftree\PYGZhy{}vectorize\PYG{+w}{ }\PYGZhy{}msse2\PYG{+w}{ }\PYGZhy{}mfpmath\PYG{o}{=}sse\PYG{+w}{ }\PYGZhy{}mfpmath\PYG{o}{=}sse\PYG{+w}{ }\PYGZlt{}file\PYGZus{}name\PYGZgt{}.c
+\end{Verbatim}

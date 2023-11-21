@@ -1,0 +1,71 @@
+\section{Parallel matrix transposition}\label{sec:transposition}
+
+The second task asks for the implementation of a matrix transposition algorithm in %
+two different ways, written in \textit{C} and parallelized with OpenMP. The end %
+goal is to compare the scalability of the two versions and evaluate their efficiency.
+
+Transposing a matrix involves flipping it over its main diagonal, exchanging %
+rows and columns, resulting in a new matrix where the rows of the original one %
+become the columns of the transposed matrix and vice versa. The first algorithm %
+does verbatim what described above, while the other divides the original %
+matrix into blocks of fixed sizes, transposes them using the same principle, %
+and finally transposes each block's content.
+
+Both algorithms were written and tested sequentially and parallelized later %
+by introducing the OpenMP directives visible in source code \ref{code:transposition}. %
+The choice of which ones to use was made after reading the professor's material %
+on the subject \cite{prof-slides}, OpenMP's 3.1 documentation \cite{openmp-cs, openmp-docs}, %
+and trying various combinations\footnote{For an explanation of each part of the directive, %
+refer to \hyperref[sec:multiplication]{Task \ref*{sec:multiplication}, Parallel %
+matrix multiplication}.}.
+
+\input{assets/code/transposition}
+
+Compilation and execution are achieved, both locally (see previous task for the %
+architecture) and on the HPC cluster, via the same PBS script used for task %
+\ref*{sec:multiplication}, integrated with the new commands. The outputs of the %
+runs are returned in \texttt{CSV} files for easier analysis with external programs.
+
+\subsection*{Results analysis}
+The implemented code was executed with square matrices of sizes between 20000 %
+and 50000, each with square blocks of 1000, 2000, 5000, and 10000. All combinations %
+were run with up to 32 CPUs on \texttt{hpc-c11-node22.unitn.it}\footnote{refer to %
+\hyperref[sec:multiplication]{task \ref*{sec:multiplication}} for its architecture.} %
+Execution times are reported in Table \ref{table:transposition} and Table %
+\ref{table:transposition-blocks} alongside the achieved bandwidth, calculated %
+using Equation \ref{eq:bandwidth}. Due to the way I wrote the \textit{C} code, %
+the algorithm without the blocks runs four times per matrix size per number of %
+CPUs. The bandwidth reported in Table \ref{table:transposition} refers to the %
+average of the runtimes.\\%
+
+\begin{equation}
+    \label{eq:bandwidth}
+    \textnormal{Bandwidth}=
+        \frac{%
+            \textnormal{Rows} \cdot \textnormal{Columns} \cdot %
+            \textnormal{size\_of(\textit{float})}
+            }
+            {\textnormal{execution time}}=\frac{\textnormal{size}^2\cdot 4}
+                                               {\textnormal{execution time}}
+        \qquad \textnormal{[B/s]}
+\end{equation}
+
+\input{assets/tables/transposition}
+\input{assets/tables/transposition-blocks}
+
+The parallel scalability of the algorithm was evaluated using the bandwidth as %
+the performance metric. Plot \ref{plot:trans-performance}, Plot \ref{plot:trans-speedup}, %
+and Plot \ref{plot:trans-efficiency} visualize the performance, the speedup, and %
+the efficiency respectively. 
+
+\input{assets/plots/trans-performance}
+\input{assets/plots/trans-speedup}
+\input{assets/plots/trans-efficiency}
+
+As expected, the algorithms achieve a better performance the more CPUs they have %
+access to. The same can be said about the speedup: the higher the number of %
+CPUs, the faster the calculations are completed. Unfortunately, the efficiency is %
+all over the place because the algorithms are not linearly scalable \cite{scalability}. %
+Implementing the parallelization differently or using another algorithm altogether %
+could be some of the possible fixes for this undefined yet mathematically correct %
+issue.

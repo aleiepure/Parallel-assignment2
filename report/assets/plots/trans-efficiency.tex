@@ -1,0 +1,279 @@
+\begin{figure}[h!tb]%
+    \centering
+    \captionsetup{type=plot}
+    \caption{\label{plot:trans-efficiency}Parallel Matrix Transposition - Efficiency graph by size of matrices}
+    \begin{tikzpicture}%
+        \begin{axis}[
+            title={without blocks},
+            xlabel={CPUs},
+            ylabel={Efficiency [\%]},
+            legend pos=south west,
+            xtick={1,2,4,8,16,32},
+            xmode=log,
+            ymode=log,
+            log ticks with fixed point,
+            cycle multiindex* list={
+                color list
+                    \nextlist
+                marks
+                    \nextlist
+            },
+            width={0.5\linewidth},
+        ]%
+            \addplot
+                coordinates {
+                    (1,100)
+                    (2,98.67)
+                    (4,82.24)
+                    (8,86.98)
+                    (16,75.78)
+                    (32,58.34)
+                };
+            
+            \addplot
+                coordinates {
+                    (1,100)
+                    (2,95.42)
+                    (4,83.07)
+                    (8,81.84)
+                    (16,71.11)
+                    (32,54.46)
+                };
+            
+            \addplot
+                coordinates {
+                    (1,100)
+                    (2,94.69)
+                    (4,83.43)
+                    (8,81.66)
+                    (16,63.61)
+                    (32,33.94)
+                };
+            
+            \addplot
+                coordinates {
+                    (1,100)
+                    (2,91.50)
+                    (4,83.44)
+                    (8,70.10)
+                    (16,58.62)
+                    (32,38.54)
+                };
+
+            \legend{20000, 30000, 40000, 50000}
+        \end{axis}
+    \end{tikzpicture}
+    \begin{tikzpicture}%
+        \begin{groupplot}[
+            group style={
+                group size=2 by 2,
+                group name=plot,
+                xlabels at=edge bottom,
+                ylabels at=edge left,
+                vertical sep=1.5cm,
+                horizontal sep=1.5cm,
+            }, 
+            width={0.45\linewidth},
+            xlabel={CPUs},
+            ylabel={Efficiency [\%]},
+            xtick={1,2,4,8,16,32},
+            legend to name=legend,
+            legend columns=-1,
+            cycle multiindex* list={
+                color list
+                    \nextlist
+                marks
+                    \nextlist
+            },
+        ]
+            \nextgroupplot[
+                title={$20000\times20000$},
+                xmode=log,
+                ymode=log,
+                log ticks with fixed point,
+            ]
+
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,83.66)
+                        (4,56.04)
+                        (8,81.22)
+                        (16,88.07)
+                        (32,81.35)
+                    };
+        
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,93.08)
+                        (4,52.07)
+                        (8,82.80)
+                        (16,92.40)
+                        (32,88.49)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,84.94)
+                        (4,38.84)
+                        (8,81.97)
+                        (16,88.51)
+                        (32,79.13)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,98.18)
+                        (4,68.20)
+                        (8,87.12)
+                        (16,96.80)
+                        (32,93.02)
+                    };
+
+            \nextgroupplot[
+                title={$30000\times30000$},
+                xmode=log,
+                ymode=log, 
+                log ticks with fixed point,
+            ]
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,82.77)
+                        (4,91.52)
+                        (8,58.62)
+                        (16,70.54)
+                        (32,82.45)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,97.73)
+                        (4,62.62)
+                        (8,53.77)
+                        (16,44.25)
+                        (32,91.87)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,92.13)
+                        (4,59.79)
+                        (8,76.18)
+                        (16,81.94)
+                        (32,62.39)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,91.71)
+                        (4,61.96)
+                        (8,73.32)
+                        (16,88.65)
+                        (32,90.03)
+                    };    
+
+            \nextgroupplot[
+                title={$40000\times40000$},
+                xmode=log,
+                ymode=log,
+                log ticks with fixed point,
+            ]
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,82.26)
+                        (4,45.27)
+                        (8,38.64)
+                        (16,59.28)
+                        (32,50.49)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,91.99)
+                        (4,76.37)
+                        (8,71.03)
+                        (16,67.58)
+                        (32,56.78)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,90.10)
+                        (4,49.45)
+                        (8,68.96)
+                        (16,82.88)
+                        (32,47.99)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,97.15)
+                        (4,66.47)
+                        (8,68.63)
+                        (16,88.07)
+                        (32,87.86)
+                    };
+            
+            \nextgroupplot[
+                title={$50000\times50000$},
+                xmode=log,
+                ymode=log, 
+                log ticks with fixed point,
+            ]
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,78.65)
+                        (4,60.40)
+                        (8,49.43)
+                        (16,55.82)
+                        (32,57.07)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,95)
+                        (4,58.11)
+                        (8,57.69)
+                        (16,76.73)
+                        (32,57.48)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,92.79)
+                        (4,69.96)
+                        (8,64.95)
+                        (16,66.11)
+                        (32,77.80)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,100)
+                        (2,95.36)
+                        (4,68.61)
+                        (8,67.58)
+                        (16,82.55)
+                        (32,89.98)
+                    };
+
+            \legend{1000, 2000, 5000, 10000}
+        \end{groupplot}
+        \node (title) at ($(plot c1r1.center)!0.5!(plot c2r1.center)+(0,3cm)$) {with blocks};
+    \end{tikzpicture}
+    \ref{legend}
+\end{figure}

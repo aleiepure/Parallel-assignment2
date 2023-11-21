@@ -1,0 +1,235 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{openmp-cs}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8c22828615b3ac629e27fd6c531e2c82}{%
+           family={ARB},
+           familyi={A\bibinitperiod},
+           given={OpenMP},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c22828615b3ac629e27fd6c531e2c82}
+      \strng{fullhash}{8c22828615b3ac629e27fd6c531e2c82}
+      \strng{bibnamehash}{8c22828615b3ac629e27fd6c531e2c82}
+      \strng{authorbibnamehash}{8c22828615b3ac629e27fd6c531e2c82}
+      \strng{authornamehash}{8c22828615b3ac629e27fd6c531e2c82}
+      \strng{authorfullhash}{8c22828615b3ac629e27fd6c531e2c82}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OpenMP 3.1 API C/C++ Syntax Quick Reference Card}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://www.openmp.org/wp-content/uploads/OpenMP3.1-CCard.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.openmp.org/wp-content/uploads/OpenMP3.1-CCard.pdf
+      \endverb
+    \endentry
+    \entry{openmp-docs}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8c22828615b3ac629e27fd6c531e2c82}{%
+           family={ARB},
+           familyi={A\bibinitperiod},
+           given={OpenMP},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c22828615b3ac629e27fd6c531e2c82}
+      \strng{fullhash}{8c22828615b3ac629e27fd6c531e2c82}
+      \strng{bibnamehash}{8c22828615b3ac629e27fd6c531e2c82}
+      \strng{authorbibnamehash}{8c22828615b3ac629e27fd6c531e2c82}
+      \strng{authornamehash}{8c22828615b3ac629e27fd6c531e2c82}
+      \strng{authorfullhash}{8c22828615b3ac629e27fd6c531e2c82}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OpenMP Application Program Interface}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://www.openmp.org/wp-content/uploads/OpenMP3.1.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.openmp.org/wp-content/uploads/OpenMP3.1.pdf
+      \endverb
+    \endentry
+    \entry{ds-algorithms}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=931bf0a1b155afd4f040bf3dc457cc42}{%
+           family={G},
+           familyi={G\bibinitperiod},
+           given={Noble},
+           giveni={N\bibinitperiod}}}%
+        {{hash=d660cd68f583ca04f0ea74ed758c3011}{%
+           family={S},
+           familyi={S\bibinitperiod},
+           given={Nalesh},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b3203d51c24371a3b4f0f8c209123814}{%
+           family={S},
+           familyi={S\bibinitperiod},
+           given={Kala},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{eb66f5c7ad1ceb35b4eb4b725184028e}
+      \strng{fullhash}{eb66f5c7ad1ceb35b4eb4b725184028e}
+      \strng{bibnamehash}{eb66f5c7ad1ceb35b4eb4b725184028e}
+      \strng{authorbibnamehash}{eb66f5c7ad1ceb35b4eb4b725184028e}
+      \strng{authornamehash}{eb66f5c7ad1ceb35b4eb4b725184028e}
+      \strng{authorfullhash}{eb66f5c7ad1ceb35b4eb4b725184028e}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 IEEE 19th India Council International Conference (INDICON)}
+      \field{title}{Accelerators for Sparse Matrix-Matrix Multiplication: A Review}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1109/INDICON56171.2022.10039979
+      \endverb
+    \endentry
+    \entry{algorithms}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d951cc98769d495f27d245a57bd0c279}{%
+           family={Al-Ghuribi},
+           familyi={A\bibinithyphendelim G\bibinitperiod},
+           given={Sumaia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8d1d03ddc5f26f47a9591f8984a9eca6}{%
+           family={Thabit},
+           familyi={T\bibinitperiod},
+           given={Khalid},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{758c169e6f97024a75ee7be77935867e}
+      \strng{fullhash}{758c169e6f97024a75ee7be77935867e}
+      \strng{bibnamehash}{758c169e6f97024a75ee7be77935867e}
+      \strng{authorbibnamehash}{758c169e6f97024a75ee7be77935867e}
+      \strng{authornamehash}{758c169e6f97024a75ee7be77935867e}
+      \strng{authorfullhash}{758c169e6f97024a75ee7be77935867e}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Computer Network and Information Security}
+      \field{month}{02}
+      \field{title}{Matrix Multiplication Algorithms}
+      \field{volume}{12}
+      \field{year}{2012}
+      \field{pages}{74\bibrangedash 79}
+      \range{pages}{6}
+    \endentry
+    \entry{scalability}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=51850334028b8e4da024dad96acb1023}{%
+           family={Kowalik},
+           familyi={K\bibinitperiod},
+           given={J.S.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=9421738c4a3d5dfbbb7f3cbb7f5559bc}{%
+           family={Dongarra},
+           familyi={D\bibinitperiod},
+           given={J.J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e008d3741de287c8f0235382029bd015}{%
+           family={Joubert},
+           familyi={J\bibinitperiod},
+           given={G.R.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=ab3295ad59265093a3ee95cc86ceefd7}{%
+           family={Grandinetti},
+           familyi={G\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=73c4a33e1668c2a9b46190b654a0e72b}{%
+           family={Kowalik},
+           familyi={K\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {North-Holland}%
+      }
+      \strng{namehash}{51850334028b8e4da024dad96acb1023}
+      \strng{fullhash}{51850334028b8e4da024dad96acb1023}
+      \strng{bibnamehash}{51850334028b8e4da024dad96acb1023}
+      \strng{authorbibnamehash}{51850334028b8e4da024dad96acb1023}
+      \strng{authornamehash}{51850334028b8e4da024dad96acb1023}
+      \strng{authorfullhash}{51850334028b8e4da024dad96acb1023}
+      \strng{editorbibnamehash}{6942d9e7955a0763c1a3cdf66a2bef68}
+      \strng{editornamehash}{6942d9e7955a0763c1a3cdf66a2bef68}
+      \strng{editorfullhash}{9b291a41bbcc13ccb393b499c0470530}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{High Performance Computing}
+      \field{issn}{0927-5452}
+      \field{series}{Advances in Parallel Computing}
+      \field{title}{Scalability of Parallel Systems: Efficiency Versus Execution Time}
+      \field{volume}{10}
+      \field{year}{1995}
+      \field{pages}{39\bibrangedash 47}
+      \range{pages}{9}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S0927-5452(06)80005-5
+      \endverb
+    \endentry
+    \entry{prof-slides}{online}{}
+      \name{author}{1}{}{%
+        {{hash=f7b514ec5e62588400bc5632cbc109a4}{%
+           family={Laura\bibnamedelimb del\bibnamedelimb Río\bibnamedelima Martín},
+           familyi={L\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Professor},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7b514ec5e62588400bc5632cbc109a4}
+      \strng{fullhash}{f7b514ec5e62588400bc5632cbc109a4}
+      \strng{bibnamehash}{f7b514ec5e62588400bc5632cbc109a4}
+      \strng{authorbibnamehash}{f7b514ec5e62588400bc5632cbc109a4}
+      \strng{authornamehash}{f7b514ec5e62588400bc5632cbc109a4}
+      \strng{authorfullhash}{f7b514ec5e62588400bc5632cbc109a4}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Lecture 10 slides for professor's Vella course Introduction to parallel computing}
+      \field{title}{OpenMP Techniques for Shared Memory Architectures}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://didatticaonline.unitn.it/dol/pluginfile.php/1776866/mod_folder/content/0/IntroPARCO-L10.pdf?forcedownload=1
+      \endverb
+      \verb{url}
+      \verb https://didatticaonline.unitn.it/dol/pluginfile.php/1776866/mod_folder/content/0/IntroPARCO-L10.pdf?forcedownload=1
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,273 @@
+\begin{figure}[h!tb]%
+    \centering
+    \captionsetup{type=plot}
+    \caption{\label{plot:trans-speedup}Parallel Matrix Transposition - Speedup graph by size of matrices}
+    \begin{tikzpicture}%
+        \begin{semilogxaxis}[
+            title={without blocks},
+            xlabel={CPUs},
+            ylabel={Speedup $[\times]$},
+            legend pos=north west,
+            xtick={1,2,4,8,16,32},
+            log ticks with fixed point,
+            cycle multiindex* list={
+                color list
+                    \nextlist
+                marks
+                    \nextlist
+            },
+            width={0.5\linewidth},
+        ]%
+            \addplot
+                coordinates {
+                    (1,1)
+                    (2,1.97)
+                    (4,3.29)
+                    (8,6.96)
+                    (16,12.12)
+                    (32,18.67)
+                };
+            
+            \addplot
+                coordinates {
+                    (1,1)
+                    (2,1.91)
+                    (4,3.32)
+                    (8,6.55)
+                    (16,11.38)
+                    (32,17.43)
+                };
+            
+            \addplot
+                coordinates {
+                    (1,1)
+                    (2,1.89)
+                    (4,3.34)
+                    (8,6.53)
+                    (16,10.18)
+                    (32,10.86)
+                };
+            
+            \addplot
+                coordinates {
+                    (1,1)
+                    (2,1.83)
+                    (4,3.34)
+                    (8,5.61)
+                    (16,9.38)
+                    (32,12.33)
+                };
+
+            \legend{20000, 30000, 40000, 50000}
+        \end{semilogxaxis}
+    \end{tikzpicture}
+    \begin{tikzpicture}%
+        \begin{groupplot}[
+            group style={
+                group size=2 by 2,
+                group name=plot,
+                xlabels at=edge bottom,
+                ylabels at=edge left,
+                vertical sep=1.5cm,
+                horizontal sep=1.5cm,
+            }, 
+            width={0.45\linewidth},
+            xlabel={CPUs},
+            ylabel={Speedup $[\times]$},
+            xtick={1,2,4,8,16,32},
+            legend to name=legend,
+            legend columns=-1,
+            cycle multiindex* list={
+                color list
+                    \nextlist
+                marks
+                    \nextlist
+            },
+        ]
+            \nextgroupplot[
+                title={$20000\times20000$},
+                xmode=log, 
+                log ticks with fixed point,
+            ]
+
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.67)
+                        (4,2.24)
+                        (8,6.50)
+                        (16,14.09)
+                        (32,26.03)
+                    };
+        
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.86)
+                        (4,2.08)
+                        (8,6.62)
+                        (16,14.78)
+                        (32,28.32)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.70)
+                        (4,1.55)
+                        (8,6.56)
+                        (16,14.16)
+                        (32,25.32)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.96)
+                        (4,2.73)
+                        (8,6.97)
+                        (16,15.49)
+                        (32,29.77)
+                    };
+
+            \nextgroupplot[
+                title={$30000\times30000$},
+                xmode=log, 
+                log ticks with fixed point,
+            ]
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.66)
+                        (4,3.66)
+                        (8,4.69)
+                        (16,11.29)
+                        (32,26.39)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.95)
+                        (4,2.50)
+                        (8,4.30)
+                        (16,7.08)
+                        (32,29.40)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.84)
+                        (4,2.39)
+                        (8,6.09)
+                        (16,13.11)
+                        (32,19.97)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.83)
+                        (4,2.48)
+                        (8,5.87)
+                        (16,14.18)
+                        (32,28.81)
+                    };    
+
+            \nextgroupplot[
+                title={$40000\times40000$},
+                xmode=log, 
+                log ticks with fixed point,
+            ]
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.65)
+                        (4,1.81)
+                        (8,3.09)
+                        (16,9.48)
+                        (32,16.16)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.84)
+                        (4,3.05)
+                        (8,5.68)
+                        (16,10.81)
+                        (32,18.17)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.80)
+                        (4,1.98)
+                        (8,5.52)
+                        (16,13.26)
+                        (32,15.36)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.94)
+                        (4,2.66)
+                        (8,5.49)
+                        (16,14.09)
+                        (32,28.12)
+                    };
+            
+            \nextgroupplot[
+                title={$50000\times50000$},
+                xmode=log, 
+                log ticks with fixed point,
+            ]
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.57)
+                        (4,2.42)
+                        (8,3.95)
+                        (16,8.93)
+                        (32,18.26)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.90)
+                        (4,2.32)
+                        (8,4.62)
+                        (16,12.28)
+                        (32,18.39)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.86)
+                        (4,2.80)
+                        (8,5.20)
+                        (16,10.58)
+                        (32,24.90)
+                    };
+                
+                \addplot
+                    coordinates {
+                        (1,1)
+                        (2,1.91)
+                        (4,2.74)
+                        (8,5.41)
+                        (16,13.21)
+                        (32,28.79)
+                    };
+
+            \legend{1000, 2000, 5000, 10000}
+        \end{groupplot}
+        \node (title) at ($(plot c1r1.center)!0.5!(plot c2r1.center)+(0,3cm)$) {with blocks};
+    \end{tikzpicture}
+    \ref{legend}
+\end{figure}

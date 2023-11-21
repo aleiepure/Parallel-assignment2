@@ -1,0 +1,125 @@
+\begin{figure}[h!tb]
+    \centering
+    \captionsetup{type=plot}
+    \caption{\label{plot:mult-speedup}Parallel Matrix Multiplication - Speedup graph by size of matrices}
+    \begin{tikzpicture}
+        \begin{axis}[
+            title={},
+            xlabel={CPUs},
+            ylabel={Speedup $[\times]$},
+            legend pos=outer north east,
+            xtick={1,2,4,8,16,32},
+            log ticks with fixed point,
+            xmode=log,
+            %ymode=log,
+            cycle multiindex* list={
+                color list
+                    \nextlist
+                marks
+                    \nextlist
+            },
+        ]
+            \addplot
+                coordinates {
+                    (1,1)
+                    (2,1.81)
+                    (4,3.58)
+                    (8,6.57)
+                    (16,10.88)
+                    (32,10.62)
+                };
+            
+            \addplot
+                coordinates {
+                    (1,1)
+                    (2,1.04)
+                    (4,3.82)
+                    (8,5.92)
+                    (16,14.09)
+                    (32,25.84)
+                };
+            
+            \addplot
+                coordinates {
+                    (1,1)
+                    (2,1.93)
+                    (4,3.99)
+                    (8,7.75)
+                    (16,15.68)
+                    (32,29.75)
+                };
+            
+            \addplot
+                coordinates {
+                    (1,1)
+                    (2,2.01)
+                    (4,3.92)
+                    (8,7.44)
+                    (16,15.41)
+                    (32,29.32)
+                };
+            
+            \addplot
+                coordinates {
+                    (1,1)
+                    (2,2.04)
+                    (4,3.97)
+                    (8,7.86)
+                    (16,15.96)
+                    (32,31.60)
+                };
+
+            \addplot
+                coordinates {
+                    (1,1)
+                    (2,1.89)
+                    (4,3.69)
+                    (8,7.61)
+                    (16,15.47)
+                    (32,31.13)
+                };
+            
+            \addplot
+                coordinates {
+                    (1,1)
+                    (2,2.03)
+                    (4,3.59)
+                    (8,7.27)
+                    (16,15.06)
+                    (32,29.90)
+                };
+            
+            \addplot
+                coordinates {
+                    (1,1)
+                    (2,2.22)
+                    (4,4.07)
+                    (8,8.32)
+                    (16,16.42)
+                    (32,32.54)
+                };
+            
+            \addplot
+                coordinates {
+                    (1,1)
+                    (2,2.02)
+                    (4,3.94)
+                    (8,7.38)
+                    (16,15.17)
+                    (32,28.41)
+                };
+            
+            \addplot
+                coordinates {
+                    (1,1)
+                    (2,1.88)
+                    (4,3.85)
+                    (8,7.14)
+                    (16,14.02)
+                    (32,27.30)
+                };
+
+            \legend{200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000}
+        \end{axis}
+    \end{tikzpicture}
+\end{figure}
