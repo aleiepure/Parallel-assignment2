@@ -13,7 +13,8 @@
 ######################################################################
 #PBS -N IntroPARCO-Assignment2
 #PBS -q short_cpuQ
-#PBS -e ./out/stderr.e
+#PBS -o /home/$USER/assignment2/out/stdout.o
+#PBS -e /home/$USER/assignment2/out/stderr.e
 #PBS -l select=1:ncpus=32:ompthreads=32
 ##PBS -m abe
 ##PBS -M alessandro.iepure@studenti.unitn.it
@@ -21,10 +22,17 @@
 
 set -e  # exit on any error
 
-# Check if running on the cluster
+# Check if running on the cluster and gather node(s) information
 hostname=$(hostname)
-if [[ "$hostname" == "hpc"* ]] | [[ "$hostname" == "hpc"* ]]; then
+if [[ "$hostname" == "hpc"* ]]; then
   on_cluster=True
+
+  # Print working node(s) info
+  NODES=$(sort -u $PBS_NODEFILE)
+  for NODE in $NODES; do
+      echo "Node: $NODE"
+      ssh $NODE "lscpu"
+  done
 else
   on_cluster=False
 fi
@@ -32,7 +40,7 @@ fi
 # Work dirs
 if [ "$on_cluster" = True ]; then
   work_dir="/home/$USER/assignment2"
-  mkdir -p "$work_dir"
+  #mkdir -p "$work_dir"
   cd "$work_dir"
 else
   work_dir="."
@@ -61,7 +69,7 @@ gcc -std=c99 -fopenmp -o "$work_dir"/bin/transposition.out "$work_dir"/src/trans
 
 # Execution
 multiplication () {
-  printf "%dx%d" "$1" "$1"
+  printf "multiplication: %dx%d" "$1" "$1"
   output_line="1, $(OMP_NUM_THREADS=1 "$work_dir"/bin/multiplication.out dense "$1" "$1" "$1" "$1")"; echo "$output_line" >> "$work_dir"/out/mult-"$1".csv; printf "."
   output_line="2, $(OMP_NUM_THREADS=2 "$work_dir"/bin/multiplication.out dense "$1" "$1" "$1" "$1")"; echo "$output_line" >> "$work_dir"/out/mult-"$1".csv; printf "."
   output_line="4, $(OMP_NUM_THREADS=4 "$work_dir"/bin/multiplication.out dense "$1" "$1" "$1" "$1")"; echo "$output_line" >> "$work_dir"/out/mult-"$1".csv; printf "."
@@ -74,7 +82,7 @@ multiplication () {
 }
 
 transposition () {
-  printf "%dx%d" "$1" "$1"
+  printf "transposition: %dx%d" "$1" "$1"
   output_line="$2, 1, $(OMP_NUM_THREADS=1 "$work_dir"/bin/transposition.out "$1" "$1" "$2" "$2")"; echo "$output_line" >> "$work_dir"/out/trans-"$1".csv; printf "."
   output_line="$2, 2, $(OMP_NUM_THREADS=2 "$work_dir"/bin/transposition.out "$1" "$1" "$2" "$2")"; echo "$output_line" >> "$work_dir"/out/trans-"$1".csv; printf "."
   output_line="$2, 4, $(OMP_NUM_THREADS=4 "$work_dir"/bin/transposition.out "$1" "$1" "$2" "$2")"; echo "$output_line" >> "$work_dir"/out/trans-"$1".csv; printf "."
