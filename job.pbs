@@ -13,11 +13,9 @@
 ######################################################################
 #PBS -N IntroPARCO-Assignment2
 #PBS -q short_cpuQ
-#PBS -o /home/$USER/assignment2/out/stdout.o
-#PBS -e /home/$USER/assignment2/out/stderr.e
+#PBS -o /home/alessandro.iepure/assignment2/out/stdout.o
+#PBS -e /home/alessandro.iepure/assignment2/out/stderr.e
 #PBS -l select=1:ncpus=32:ompthreads=32
-##PBS -m abe
-##PBS -M alessandro.iepure@studenti.unitn.it
 ######################################################################
 
 set -e  # exit on any error

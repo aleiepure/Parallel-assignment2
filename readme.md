@@ -10,17 +10,18 @@ Clone this repository on the University HPC cluster, and submit to the queue the
 commands:
 
 ```shell
-git clone https://github.com/aleiepure/Parallel-assignment2 assignment2
-cd assignment2
+git clone https://github.com/aleiepure/Parallel-assignment2 ~/assignment2
+cd ~/assignment2
+sed -i "s/alessandro.iepure/$(whoami)/g" job.pbs  # change my username to the current user's
 qsub job.pbs
 ```
 
 The status of the execution can be checked with the command `qstat -u $USER`. An empty output means that no jobs are 
 currently running for your user.
 
-At the end of the job, the results of the computations are going to be available in `.CSV` files in the `out/` folder 
+At the end of the job, the results of the computations will be available in `.CSV` files in the `out/` folder 
 (created automatically). \
-Errors abort the execution of the job immediately and the `stderr` is dumped into `out/stderr.e<jobid>`.
+Errors abort the execution of the job immediately and the `stderr` is dumped into `out/stderr.e`.
 
 ### Locally
 The `job.pbs` script can be used as is from in a shell. It depends on GCC (tested with 4.8 and 13.2 only) 
