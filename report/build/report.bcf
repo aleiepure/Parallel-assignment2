@@ -2362,15 +2362,15 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">algorithms</bcf:citekey>
-    <bcf:citekey order="1" intorder="2">ds-algorithms</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">prof-slides</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">openmp-cs</bcf:citekey>
-    <bcf:citekey order="3" intorder="2">openmp-docs</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">scalability</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">prof-slides</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">openmp-cs</bcf:citekey>
-    <bcf:citekey order="6" intorder="2">openmp-docs</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">scalability</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">ds-algorithms</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">prof-slides</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">openmp-cs</bcf:citekey>
+    <bcf:citekey order="4" intorder="2">openmp-docs</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">scalability</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">prof-slides</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">openmp-cs</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">openmp-docs</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">scalability</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

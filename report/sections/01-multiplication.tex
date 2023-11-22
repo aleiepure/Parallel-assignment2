@@ -4,22 +4,39 @@ The first task asks for the implementation of a parallel matrix by matrix multip
 algorithm in \textit{C} using OpenMP. The goal of the task is to check the scalability %
 of the code and evaluate its efficiency.
 
-The most trivial method is called "row by column" and involves computing each element of the %
-resulting matrix by taking the dot product of a row of the first matrix and the %
-corresponding column of the second one. Other algorithms and %
-techniques are more complex\cite{algorithms, ds-algorithms} and exploit the hardware %
-of the machine (registers, cache and memory alignment, etc.) or the content of %
-the matrices to get better performance. Such methodologies are %
-"row by row", "column by column", "Strassen's", and many others.
+Matrix multiplication methods vary in performance when applied to dense and sparse %
+matrices \cite{algorithms}. The most trivial way to calculate this operation is %
+the "row by column" method which involves computing each element of the resulting %
+matrix by taking the dot product of a row of the first matrix and the corresponding %
+column of the second one. It is commonly used for dense matrices and requires $n^3$ %
+multiplications for a $n\times n$ matrix. While it also works for sparse matrices, %
+it is less efficient due to the large portions of zero elements.\\%
+Sparse matrices offer advantages in memory usage and computation efficiency by %
+storing only the non-zero values and their positions, reducing the occupied space %
+\cite{ds-algorithms}. Moreover, sparse matrix-oriented algorithms, like Strassen's, %
+exploit the structure of the data to reduce the number of operations needed while %
+also benefitting from a better cache utilization.\\%
+In my assessment, implementations of different algorithms for the two types of %
+matrices and the respective analyses are beyond the scope of this assignment. I %
+choose to implement the "row by column" algorithm that works for both, even if %
+it may be less performant.
 
-For the sake of simplicity, I choose to implement the "row by column" method. %
-It was designed with dense matrices in mind but works fine with sparse matrices %
-without exploiting their benefits, like reduced memory usage and data reutilization. %
-I opted for this method as, in my assessment, the more complex ones surpass the %
-scope of this assignment.
+% The most trivial method is called "row by column" and involves computing each element of the %
+% resulting matrix by taking the dot product of a row of the first matrix and the %
+% corresponding column of the second one. Other algorithms and %
+% techniques are more complex\cite{algorithms, ds-algorithms} and exploit the hardware %
+% of the machine (registers, cache and memory alignment, etc.) or the content of %
+% the matrices to get better performance. Such methodologies are %
+% "row by row", "column by column", "Strassen's", and many others.\\%
+
+% For the sake of simplicity, I choose to implement the "row by column" method. %
+% It was designed with dense matrices in mind but works fine with sparse matrices %
+% without exploiting their benefits, like reduced memory usage and data reutilization. %
+% I opted for this method as, in my assessment, the more complex ones surpass the %
+% scope of this assignment.
 
 The algorithm was implemented sequentially and later I introduced %
-OpenMP directives to obtain the parallel code.\\%
+OpenMP directives to obtain a parallel code.\\%
 Source code \ref{code:multiplication} shows the parallelized function with the %
 directives used. The choice of which ones to use was made after reading %
 the professor's material on the subject \cite{prof-slides}, OpenMP's 3.1 %

@@ -39,27 +39,27 @@
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Matrix multiplication - Run times and FLOPS}}{2}{table.1}\protected@file@percent }
 \abx@aux@cite{0}{scalability}
 \abx@aux@segm{0}{0}{scalability}
-\newlabel{table:multiplication}{{1}{3}{Results analysis}{table.1}{}}
-\newlabel{table:multiplication@cref}{{[table][1][]1}{[1][2][]3}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Matrix multiplication - Run times and FLOPS}}{3}{table.1}\protected@file@percent }
-\@writefile{loplot}{\contentsline {plot}{\numberline {1}{\ignorespaces Parallel Matrix Multiplication - Performance graph by size of matrices}}{3}{plot.caption.4}\protected@file@percent }
-\newlabel{plot:mult-performance}{{1}{3}{Parallel Matrix Multiplication - Performance graph by size of matrices}{plot.caption.4}{}}
-\newlabel{plot:mult-performance@cref}{{[plot][1][]1}{[1][3][]3}}
-\@writefile{loplot}{\contentsline {plot}{\numberline {2}{\ignorespaces Parallel Matrix Multiplication - Speedup graph by size of matrices}}{3}{plot.caption.6}\protected@file@percent }
-\newlabel{plot:mult-speedup}{{2}{3}{Parallel Matrix Multiplication - Speedup graph by size of matrices}{plot.caption.6}{}}
-\newlabel{plot:mult-speedup@cref}{{[plot][2][]2}{[1][3][]3}}
 \abx@aux@cite{0}{prof-slides}
 \abx@aux@segm{0}{0}{prof-slides}
 \abx@aux@cite{0}{openmp-cs}
 \abx@aux@segm{0}{0}{openmp-cs}
 \abx@aux@cite{0}{openmp-docs}
 \abx@aux@segm{0}{0}{openmp-docs}
+\newlabel{table:multiplication}{{1}{3}{Results analysis}{table.1}{}}
+\newlabel{table:multiplication@cref}{{[table][1][]1}{[1][2][]3}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Matrix multiplication - Run times and FLOPS}}{3}{table.1}\protected@file@percent }
+\@writefile{loplot}{\contentsline {plot}{\numberline {1}{\ignorespaces Parallel Matrix Multiplication - Performance graph by size of matrices}}{3}{plot.caption.4}\protected@file@percent }
+\newlabel{plot:mult-performance}{{1}{3}{Parallel Matrix Multiplication - Performance graph by size of matrices}{plot.caption.4}{}}
+\newlabel{plot:mult-performance@cref}{{[plot][1][]1}{[1][3][]3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Parallel matrix transposition}{3}{section.2}\protected@file@percent }
+\newlabel{sec:transposition}{{2}{3}{Parallel matrix transposition}{section.2}{}}
+\newlabel{sec:transposition@cref}{{[section][2][]2}{[1][3][]3}}
+\@writefile{loplot}{\contentsline {plot}{\numberline {2}{\ignorespaces Parallel Matrix Multiplication - Speedup graph by size of matrices}}{4}{plot.caption.6}\protected@file@percent }
+\newlabel{plot:mult-speedup}{{2}{4}{Parallel Matrix Multiplication - Speedup graph by size of matrices}{plot.caption.6}{}}
+\newlabel{plot:mult-speedup@cref}{{[plot][2][]2}{[1][3][]4}}
 \@writefile{loplot}{\contentsline {plot}{\numberline {3}{\ignorespaces Parallel Matrix Multiplication - Efficiency graph by size of matrices}}{4}{plot.caption.8}\protected@file@percent }
 \newlabel{plot:mult-efficiency}{{3}{4}{Parallel Matrix Multiplication - Efficiency graph by size of matrices}{plot.caption.8}{}}
 \newlabel{plot:mult-efficiency@cref}{{[plot][3][]3}{[1][3][]4}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Parallel matrix transposition}{4}{section.2}\protected@file@percent }
-\newlabel{sec:transposition}{{2}{4}{Parallel matrix transposition}{section.2}{}}
-\newlabel{sec:transposition@cref}{{[section][2][]2}{[1][4][]4}}
 \@writefile{lol}{\contentsline {listing}{\numberline {2}{\ignorespaces Implemented algorithm}}{4}{listing.caption.9}\protected@file@percent }
 \newlabel{code:transposition}{{2}{4}{Implemented algorithm}{listing.caption.9}{}}
 \newlabel{code:transposition@cref}{{[listing][2][]2}{[1][4][]4}}
@@ -106,48 +106,52 @@
 \expandafter \gdef \csname pgfplots@legend@to@name@legend\endcsname {\begingroup \def \pgfplots@legend@to@name {\pgfkeysdef {/pgfplots/every axis legend}{\pgfkeysalso {cells={anchor=center},inner xsep={3pt},inner ysep={2pt},nodes={inner sep=2pt,text depth=0.15em},anchor={north east},shape={rectangle},fill={white},draw={black},at={(0.98,0.98)}}}\pgfkeysdef {/pgfplots/every legend image post}{}\def \numplots {4}\def \plotnum {0}\def \plotnumofactualtype {0}\matrix [/pgfplots/every axis legend]{\begingroup \def \pgfplots@draw@image {\def \tikz@plot@handler {\pgfkeys {/pgf/plots/@handler options/.cd, start=\relax , end macro=\relax , point macro=\pgfutil@gobble , jump macro=\relax , special macro=\pgfutil@gobble , point macro=\pgf@plot@line@handler , jump=\global \let \pgf@plotstreampoint \pgf@plot@line@handler@move }\begingroup \escapechar =-1 \edef \pgfplotsplothandlername {\string \pgfplothandlerlineto }\pgfmath@smuggleone \pgfplotsplothandlername \endgroup \def \pgfplotsplothandlerLUAfactory {function(axis, pointmetainputhandler) return pgfplots.GenericPlothandler.new("\pgfplotsplothandlername ", axis,pointmetainputhandler) end}\def \pgfplotsplothandlerLUAvisualizerfactory {pgfplots.defaultPlotVisualizerFactory}}\pgfkeysdef {/pgfplots/legend image code}{\draw [/pgfplots/mesh=false,bar width=3pt,bar shift=0pt,mark repeat=2,mark phase=2,] plot coordinates { (0cm,0cm) (0.3cm,0cm) (0.6cm,0cm)};}\pgfkeysdef {/pgfplots/every legend image post}{}\pgfkeyssetvalue {/pgfplots/mark list fill}{.!80!black}\pgfplots@show@small@legendplots {red={\pgfkeysnovalue },every mark/.append style={solid,fill=\pgfkeysvalueof {/pgfplots/mark list fill}},mark={*}}{}}\ifpgfpicture \pgfplots@draw@image \else \expandafter \ifx \csname tikzappendtofigurename\endcsname \relax \else \begingroup \tikzappendtofigurename {_crossref}\fi \tikz []{\pgfplots@draw@image }\expandafter \ifx \csname tikzappendtofigurename\endcsname \relax \else \endgroup \fi \fi \endgroup \pgfmatrixnextcell \node []{1000};\pgfmatrixnextcell \begingroup \def \pgfplots@draw@image {\def \tikz@plot@handler {\pgfkeys {/pgf/plots/@handler options/.cd, start=\relax , end macro=\relax , point macro=\pgfutil@gobble , jump macro=\relax , special macro=\pgfutil@gobble , point macro=\pgf@plot@line@handler , jump=\global \let \pgf@plotstreampoint \pgf@plot@line@handler@move }\begingroup \escapechar =-1 \edef \pgfplotsplothandlername {\string \pgfplothandlerlineto }\pgfmath@smuggleone \pgfplotsplothandlername \endgroup \def \pgfplotsplothandlerLUAfactory {function(axis, pointmetainputhandler) return pgfplots.GenericPlothandler.new("\pgfplotsplothandlername ", axis,pointmetainputhandler) end}\def \pgfplotsplothandlerLUAvisualizerfactory {pgfplots.defaultPlotVisualizerFactory}}\pgfkeysdef {/pgfplots/legend image code}{\draw [/pgfplots/mesh=false,bar width=3pt,bar shift=0pt,mark repeat=2,mark phase=2,] plot coordinates { (0cm,0cm) (0.3cm,0cm) (0.6cm,0cm)};}\pgfkeysdef {/pgfplots/every legend image post}{}\pgfkeyssetvalue {/pgfplots/mark list fill}{.!80!black}\pgfplots@show@small@legendplots {blue={\pgfkeysnovalue },every mark/.append style={solid,fill=\pgfkeysvalueof {/pgfplots/mark list fill}},mark={square*}}{}}\ifpgfpicture \pgfplots@draw@image \else \expandafter \ifx \csname tikzappendtofigurename\endcsname \relax \else \begingroup \tikzappendtofigurename {_crossref}\fi \tikz []{\pgfplots@draw@image }\expandafter \ifx \csname tikzappendtofigurename\endcsname \relax \else \endgroup \fi \fi \endgroup \pgfmatrixnextcell \node []{2000};\pgfmatrixnextcell \begingroup \def \pgfplots@draw@image {\def \tikz@plot@handler {\pgfkeys {/pgf/plots/@handler options/.cd, start=\relax , end macro=\relax , point macro=\pgfutil@gobble , jump macro=\relax , special macro=\pgfutil@gobble , point macro=\pgf@plot@line@handler , jump=\global \let \pgf@plotstreampoint \pgf@plot@line@handler@move }\begingroup \escapechar =-1 \edef \pgfplotsplothandlername {\string \pgfplothandlerlineto }\pgfmath@smuggleone \pgfplotsplothandlername \endgroup \def \pgfplotsplothandlerLUAfactory {function(axis, pointmetainputhandler) return pgfplots.GenericPlothandler.new("\pgfplotsplothandlername ", axis,pointmetainputhandler) end}\def \pgfplotsplothandlerLUAvisualizerfactory {pgfplots.defaultPlotVisualizerFactory}}\pgfkeysdef {/pgfplots/legend image code}{\draw [/pgfplots/mesh=false,bar width=3pt,bar shift=0pt,mark repeat=2,mark phase=2,] plot coordinates { (0cm,0cm) (0.3cm,0cm) (0.6cm,0cm)};}\pgfkeysdef {/pgfplots/every legend image post}{}\pgfkeyssetvalue {/pgfplots/mark list fill}{.!80!black}\pgfplots@show@small@legendplots {black={\pgfkeysnovalue },every mark/.append style={solid,fill=\pgfkeysvalueof {/pgfplots/mark list fill}},mark={triangle*}}{}}\ifpgfpicture \pgfplots@draw@image \else \expandafter \ifx \csname tikzappendtofigurename\endcsname \relax \else \begingroup \tikzappendtofigurename {_crossref}\fi \tikz []{\pgfplots@draw@image }\expandafter \ifx \csname tikzappendtofigurename\endcsname \relax \else \endgroup \fi \fi \endgroup \pgfmatrixnextcell \node []{5000};\pgfmatrixnextcell \begingroup \def \pgfplots@draw@image {\def \tikz@plot@handler {\pgfkeys {/pgf/plots/@handler options/.cd, start=\relax , end macro=\relax , point macro=\pgfutil@gobble , jump macro=\relax , special macro=\pgfutil@gobble , point macro=\pgf@plot@line@handler , jump=\global \let \pgf@plotstreampoint \pgf@plot@line@handler@move }\begingroup \escapechar =-1 \edef \pgfplotsplothandlername {\string \pgfplothandlerlineto }\pgfmath@smuggleone \pgfplotsplothandlername \endgroup \def \pgfplotsplothandlerLUAfactory {function(axis, pointmetainputhandler) return pgfplots.GenericPlothandler.new("\pgfplotsplothandlername ", axis,pointmetainputhandler) end}\def \pgfplotsplothandlerLUAvisualizerfactory {pgfplots.defaultPlotVisualizerFactory}}\pgfkeysdef {/pgfplots/legend image code}{\draw [/pgfplots/mesh=false,bar width=3pt,bar shift=0pt,mark repeat=2,mark phase=2,] plot coordinates { (0cm,0cm) (0.3cm,0cm) (0.6cm,0cm)};}\pgfkeysdef {/pgfplots/every legend image post}{}\pgfkeyssetvalue {/pgfplots/mark list fill}{.!80!black}\pgfplots@show@small@legendplots {yellow={\pgfkeysnovalue },every mark/.append style={solid,fill=\pgfkeysvalueof {/pgfplots/mark list fill}},mark={diamond*}}{}}\ifpgfpicture \pgfplots@draw@image \else \expandafter \ifx \csname tikzappendtofigurename\endcsname \relax \else \begingroup \tikzappendtofigurename {_crossref}\fi \tikz []{\pgfplots@draw@image }\expandafter \ifx \csname tikzappendtofigurename\endcsname \relax \else \endgroup \fi \fi \endgroup \pgfmatrixnextcell \node []{10000};\\};}\ifpgfpicture \pgfplots@legend@to@name \else \expandafter \ifx \csname tikzappendtofigurename\endcsname \relax \else \begingroup \tikzappendtofigurename {_crossref}\fi \tikz [/pgfplots/every legend to name picture/.try]{\pgfplots@legend@to@name }\expandafter \ifx \csname tikzappendtofigurename\endcsname \relax \else \endgroup \fi \fi \endgroup }
 \abx@aux@cite{0}{scalability}
 \abx@aux@segm{0}{0}{scalability}
-\@writefile{loplot}{\contentsline {plot}{\numberline {4}{\ignorespaces Parallel Matrix Transposition - Performance graph by size of matrices}}{8}{plot.caption.12}\protected@file@percent }
-\newlabel{plot:trans-performance}{{4}{8}{Parallel Matrix Transposition - Performance graph by size of matrices}{plot.caption.12}{}}
-\newlabel{plot:trans-performance@cref}{{[plot][4][]4}{[1][8][]8}}
-\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{8}{Parallel Matrix Transposition - Performance graph by size of matrices}{pgfplotslink.2.0}{}}
-\newlabel{legend@cref}{{[plot][4][]4}{[1][8][]8}}
-\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{8}{Parallel Matrix Transposition - Performance graph by size of matrices}{pgfplotslink.2.1}{}}
-\newlabel{legend@cref}{{[plot][4][]4}{[1][8][]8}}
-\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{8}{Parallel Matrix Transposition - Performance graph by size of matrices}{pgfplotslink.2.2}{}}
-\newlabel{legend@cref}{{[plot][4][]4}{[1][8][]8}}
-\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{8}{Parallel Matrix Transposition - Performance graph by size of matrices}{pgfplotslink.2.3}{}}
-\newlabel{legend@cref}{{[plot][4][]4}{[1][8][]8}}
-\@writefile{loplot}{\contentsline {plot}{\numberline {5}{\ignorespaces Parallel Matrix Transposition - Speedup graph by size of matrices}}{9}{plot.caption.14}\protected@file@percent }
-\newlabel{plot:trans-speedup}{{5}{9}{Parallel Matrix Transposition - Speedup graph by size of matrices}{plot.caption.14}{}}
-\newlabel{plot:trans-speedup@cref}{{[plot][5][]5}{[1][8][]9}}
-\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{9}{Parallel Matrix Transposition - Speedup graph by size of matrices}{pgfplotslink.2.4}{}}
-\newlabel{legend@cref}{{[plot][5][]5}{[1][8][]9}}
-\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{9}{Parallel Matrix Transposition - Speedup graph by size of matrices}{pgfplotslink.2.5}{}}
-\newlabel{legend@cref}{{[plot][5][]5}{[1][8][]9}}
-\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{9}{Parallel Matrix Transposition - Speedup graph by size of matrices}{pgfplotslink.2.6}{}}
-\newlabel{legend@cref}{{[plot][5][]5}{[1][8][]9}}
-\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{9}{Parallel Matrix Transposition - Speedup graph by size of matrices}{pgfplotslink.2.7}{}}
-\newlabel{legend@cref}{{[plot][5][]5}{[1][8][]9}}
-\@writefile{loplot}{\contentsline {plot}{\numberline {6}{\ignorespaces Parallel Matrix Transposition - Efficiency graph by size of matrices}}{10}{plot.caption.16}\protected@file@percent }
-\newlabel{plot:trans-efficiency}{{6}{10}{Parallel Matrix Transposition - Efficiency graph by size of matrices}{plot.caption.16}{}}
-\newlabel{plot:trans-efficiency@cref}{{[plot][6][]6}{[1][8][]10}}
-\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{10}{Parallel Matrix Transposition - Efficiency graph by size of matrices}{pgfplotslink.2.8}{}}
-\newlabel{legend@cref}{{[plot][6][]6}{[1][8][]10}}
-\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{10}{Parallel Matrix Transposition - Efficiency graph by size of matrices}{pgfplotslink.2.9}{}}
-\newlabel{legend@cref}{{[plot][6][]6}{[1][8][]10}}
-\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{10}{Parallel Matrix Transposition - Efficiency graph by size of matrices}{pgfplotslink.2.10}{}}
-\newlabel{legend@cref}{{[plot][6][]6}{[1][8][]10}}
-\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{10}{Parallel Matrix Transposition - Efficiency graph by size of matrices}{pgfplotslink.2.11}{}}
-\newlabel{legend@cref}{{[plot][6][]6}{[1][8][]10}}
+\newlabel{table:transposition-blocks}{{3}{8}{Results analysis}{table.3}{}}
+\newlabel{table:transposition-blocks@cref}{{[table][3][]3}{[1][6][]8}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Matrix transposition in blocks - run times and bandwidth}}{8}{table.3}\protected@file@percent }
+\@writefile{loplot}{\contentsline {plot}{\numberline {4}{\ignorespaces Parallel Matrix Transposition - Performance graph by size of matrices}}{9}{plot.caption.12}\protected@file@percent }
+\newlabel{plot:trans-performance}{{4}{9}{Parallel Matrix Transposition - Performance graph by size of matrices}{plot.caption.12}{}}
+\newlabel{plot:trans-performance@cref}{{[plot][4][]4}{[1][8][]9}}
+\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{9}{Parallel Matrix Transposition - Performance graph by size of matrices}{pgfplotslink.2.0}{}}
+\newlabel{legend@cref}{{[plot][4][]4}{[1][8][]9}}
+\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{9}{Parallel Matrix Transposition - Performance graph by size of matrices}{pgfplotslink.2.1}{}}
+\newlabel{legend@cref}{{[plot][4][]4}{[1][8][]9}}
+\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{9}{Parallel Matrix Transposition - Performance graph by size of matrices}{pgfplotslink.2.2}{}}
+\newlabel{legend@cref}{{[plot][4][]4}{[1][8][]9}}
+\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{9}{Parallel Matrix Transposition - Performance graph by size of matrices}{pgfplotslink.2.3}{}}
+\newlabel{legend@cref}{{[plot][4][]4}{[1][8][]9}}
+\@writefile{loplot}{\contentsline {plot}{\numberline {5}{\ignorespaces Parallel Matrix Transposition - Speedup graph by size of matrices}}{10}{plot.caption.14}\protected@file@percent }
+\newlabel{plot:trans-speedup}{{5}{10}{Parallel Matrix Transposition - Speedup graph by size of matrices}{plot.caption.14}{}}
+\newlabel{plot:trans-speedup@cref}{{[plot][5][]5}{[1][8][]10}}
+\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{10}{Parallel Matrix Transposition - Speedup graph by size of matrices}{pgfplotslink.2.4}{}}
+\newlabel{legend@cref}{{[plot][5][]5}{[1][8][]10}}
+\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{10}{Parallel Matrix Transposition - Speedup graph by size of matrices}{pgfplotslink.2.5}{}}
+\newlabel{legend@cref}{{[plot][5][]5}{[1][8][]10}}
+\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{10}{Parallel Matrix Transposition - Speedup graph by size of matrices}{pgfplotslink.2.6}{}}
+\newlabel{legend@cref}{{[plot][5][]5}{[1][8][]10}}
+\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{10}{Parallel Matrix Transposition - Speedup graph by size of matrices}{pgfplotslink.2.7}{}}
+\newlabel{legend@cref}{{[plot][5][]5}{[1][8][]10}}
+\@writefile{loplot}{\contentsline {plot}{\numberline {6}{\ignorespaces Parallel Matrix Transposition - Efficiency graph by size of matrices}}{11}{plot.caption.16}\protected@file@percent }
+\newlabel{plot:trans-efficiency}{{6}{11}{Parallel Matrix Transposition - Efficiency graph by size of matrices}{plot.caption.16}{}}
+\newlabel{plot:trans-efficiency@cref}{{[plot][6][]6}{[1][8][]11}}
+\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{11}{Parallel Matrix Transposition - Efficiency graph by size of matrices}{pgfplotslink.2.8}{}}
+\newlabel{legend@cref}{{[plot][6][]6}{[1][8][]11}}
+\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{11}{Parallel Matrix Transposition - Efficiency graph by size of matrices}{pgfplotslink.2.9}{}}
+\newlabel{legend@cref}{{[plot][6][]6}{[1][8][]11}}
+\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{11}{Parallel Matrix Transposition - Efficiency graph by size of matrices}{pgfplotslink.2.10}{}}
+\newlabel{legend@cref}{{[plot][6][]6}{[1][8][]11}}
+\newlabel{legend}{{\expandafter\protect\csname pgfplots@legend@to@name@legend\endcsname}{11}{Parallel Matrix Transposition - Efficiency graph by size of matrices}{pgfplotslink.2.11}{}}
+\newlabel{legend@cref}{{[plot][6][]6}{[1][8][]11}}
 \gdef\minted@oldcachelist{,
   manni.pygstyle,
   26D5A068FC1F90B2DE4EA3A1CAFB54E4D56AE0B2481EE412FC017990EB45D5AC.pygtex,
   0BD43D5BA6BE28E6A80A711A4DD88976D56AE0B2481EE412FC017990EB45D5AC.pygtex}
 \abx@aux@read@bbl@mdfivesum{5BE446EF4F1C11CCA96594F5A40B4AD2}
+\abx@aux@read@bblrerun
 \abx@aux@defaultrefcontext{0}{openmp-cs}{nty/global//global/global}
 \abx@aux@defaultrefcontext{0}{openmp-docs}{nty/global//global/global}
 \abx@aux@defaultrefcontext{0}{ds-algorithms}{nty/global//global/global}
 \abx@aux@defaultrefcontext{0}{algorithms}{nty/global//global/global}
 \abx@aux@defaultrefcontext{0}{scalability}{nty/global//global/global}
 \abx@aux@defaultrefcontext{0}{prof-slides}{nty/global//global/global}
-\gdef \@abspage@last{11}
+\gdef \@abspage@last{12}
